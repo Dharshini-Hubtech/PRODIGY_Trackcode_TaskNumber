@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+li, h1, ul{
+       display: inline;
+       
+}
+ul{
+    margin-left: 70%;
+}
+input {
+    width:80%;
+    padding:15px; 
+}
+.searchbar{
+    padding: 50px;
+    text-align:center;
+}
+h1{
+    align-items: center;
+}
+.box{
+    margin-top: 2px;
+     border-color: black;
+     border-width:2px;
+     border-style:solid;
+     display: inline-block;
+     width:200px;
+}
+.products{
+    text-align:center;
+}
+
+.box :hover{
+    cursor: pointer;
+    background-color: antiquewhite;
+    color: goldenrod;
+}
+.Aboutus{
+    margin: 20px;
+    text-align: center;
+}
+
+.Contactus{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+}
