@@ -1,0 +1,80 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        .stopwatch{
+            background-color:beige;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 40px 0;;
+            color: brown;
+            margin: 200px;
+            box-shadow: 0 10px rgba(red, green, blue, alpha);
+
+        }
+        h1{
+            margin-top: 60px;
+            font-size: 64px;
+            font-weight: 300px;
+        }
+        img{
+            width: 50px;
+            margin: 0 20px;
+            cursor: pointer;
+
+        }
+        img:nth-child(2){
+            width: 80px;
+        }
+    
+    </style>
+</head>
+<body>
+   <div class="stopwatch">
+    <h1 id="displaytime">00:01:20</h1>
+    <div class="buttons">
+        <img src="https://icons.iconarchive.com/icons/fa-team/fontawesome-regular/512/FontAwesome-Regular-Circle-Stop-icon.png" alt="stop" >
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTndMz1rRqRyLjynhANzaOC5oRMb4UVPw2CdA&s" onclick="watchStart()">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNdb__YLa2bB6rFLkaeM4tvY3ELlDv7pNVoA&s" alt="">
+    </div>
+   </div>
+   <script>
+       let [seconds,  minutes, hours]=[0,0,0];
+       let displayTime = documents.getElementById("displaytime");
+       let timer=null;
+
+       function stopwatch(){
+        seconds++;
+        if(seconds == 60){
+            seconds= 0;
+            minutes++;
+            if(minutes== 60){
+                minutes= 0;
+                hours++;
+            }
+        }
+
+
+        let h =hours < 10 ? "0" + hours : hours;
+        let m = minutes < 10 ? "0" + minutes : minutes;
+        let s= seconds < 10 ? "0" +seconds : seconds;
+
+            displayTime.innerHTML= hours +":"+ minutes +":"+seconds;
+        }
+        function watchStart(){
+          if(timer!==null);
+        }
+        {
+            clearInterval(timer);
+        }
+        {
+            timer=setInterval(stopwatch,1000);
+        }
+    
+   </script>
+</body>
+</html>
